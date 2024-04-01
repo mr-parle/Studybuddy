@@ -1,4 +1,4 @@
-from django.forms import ModelForms
+from django.forms import ModelForm
 from .models import Room
 
 class RoomForm(ModelForm):
