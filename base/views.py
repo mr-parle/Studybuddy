@@ -112,10 +112,8 @@ def updateRoom(request, pk):
     form = RoomForm(instance=room)
     
     if request.user != room.host:
-        return HttpResponse('you are not allowed here!!')
-    
-    
-    
+        return HttpResponse('you are not allowed here!!')  
+        
     if request.method == 'POST':
         form = RoomForm(request.POST, instance = room)
         if form.is_valid():
